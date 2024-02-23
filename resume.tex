@@ -1,0 +1,300 @@
+% Based (but completely redesigned) on Resume in Latex Template by Sourabh Bajaj
+\documentclass[letterpaper, 10pt]{article}
+
+% font
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{noto}
+
+\pdfgentounicode=1
+
+% packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{scrextend}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{pagecolor}
+\usepackage{ragged2e}
+\usepackage{graphicx}
+
+\usepackage[left=1cm,right=1cm,top=1.25cm,bottom=1.25cm]{geometry}
+
+% custom
+
+% command macros
+\newcommand{\iconSpace}{\hspace{2px}}
+\newcommand{\bulletSpace}{\vspace{-4pt}}
+\newcommand{\hSpace}{\hspace{8px}}
+\newcommand{\secStartSpace}{\vspace{3pt}}
+\newcommand{\secEndSpace}{\vspace{5pt}}
+\newcommand{\spaceCollapse}{\vspace{-2pt}}
+
+% use the macro for work experience header
+% arg 1 = header title
+% arg 2 = position title (subtitle (in italics)
+% arg 3 = date
+\newcommand{\workHeader}[3]{%
+    \noindent \large{\textbf{\textcolor{TextColor}{#1}}} \hfill \normalsize{#3}\vspace{2pt}\\
+    \textit{#2}\vspace{-2pt}%
+}
+
+% use the macro for work experience subheader
+\newcommand{\workSubHeader}[2]{%
+    \noindent \textit{#1} \hfill \normalsize{#2}
+    \vspace{-2pt}%
+}
+
+% use the macro for project header
+\newcommand{\projectHeader}[3]{%
+    \noindent\href{#2}{\large\textbf{#1}} \hfill \normalsize#3 \vspace{2pt}%
+}
+
+% line spacing
+
+% colors
+% \definecolor{blue}{RGB}{14, 100, 237} % change the blue color if this one is not to your liking
+
+\definecolor{PageColor}{HTML}{ffffff}
+\definecolor{TextColor}{HTML}{000000}
+\definecolor{HeaderColor}{HTML}{000000}
+\definecolor{black}{HTML}{000000}
+\definecolor{white}{HTML}{ffffff}
+
+\pagecolor{PageColor}
+\color{TextColor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=HeaderColor,
+    filecolor=HeaderColor,
+    urlcolor=TextColor,
+}
+
+% indent space
+\titlespacing{\section}{0pt}{1px}{2ex}
+
+% Sections formatting
+\titleformat{\section}{
+\vspace{-2pt}\raggedright\Large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% bolder
+\newcommand{\boldlarger}[1]{{\large\textbf{\color{white}{#1}}}}
+% \newcommand{\boldlarger}[1]{{\textbf{\color{white}{#1}}}}
+\newcommand{\justlarge}[1]{{\large \textbf{#1}}}
+
+\begin{document}
+
+% ------------- header ------------- %
+\noindent \hspace{-4pt} 
+\begin{center} {\Large \textbf{Roman Q. Chavez}}
+\vspace{5pt}
+\color{TextColor}
+
+    \noindent
+    \color{black}
+        \faicon{linkedin} \iconSpace \href{https://www.linkedin.com/in/romanqchavez//}{Roman Chavez} \hspace{2pt}
+        \faicon{envelope} \iconSpace \href{mailto:rqc3@cornell.edu}{rqc3@cornell.edu} \hspace{2pt}
+        \faicon{github} \iconSpace \href{https://github.com/romanqc}{Romanqc} \hspace{2pt}
+        \faicon{youtube} \iconSpace \href{https://youtube.com/@romanqc?si=kCd1-Ca1zh4sKMBL}{Roman Chavez} \hspace{2pt} \\
+\vspace{5pt}
+\end{center}
+% ------------- end header ------------- %
+
+
+% ------------- education ------------- %
+\vspace{-5pt}
+\section{ \color{black} \hspace{-8pt} \large \textbf{Education} }
+
+\secStartSpace
+\noindent \normalsize \textbf{Cornell University}, Sophomore \hfill \normalsize{Aug 2022 - May 2026} \\
+\setlength \parindent{1cm} B.A. Pure Mathematics | Minor in Computer Science \\
+\secEndSpace
+% ------------- end education ------------- %
+
+\vspace{-5pt}
+
+% ------------- education ------------- %
+\vspace{-5pt}
+\section{ \color{black} \hspace{-8pt} \large \textbf{Work Experience} }
+
+% \secStartSpace
+% % \noindent \normalsize \textbf{Teacher Assistant}, Cornell University, Karim-Aly Kassam \hfill \normalsize{Jan 2024 - May 2024} \\
+% % \setlength \parindent{1cm} American Indian Indigenous Studies 1110: Indigenous Issues in Global Perspectives \\
+% % \\
+% \noindent \normalsize \textbf{Residential Advisor}, Cornell University, Ithaca, NY\hfill \normalsize{Jun 2023 - Aug 2023} \\
+% \setlength \parindent{1cm} 
+%     \vspace{-18pt}
+%     \noindent \hspace{-10pt} \begin{itemize} 
+%         \item Counseled rising \textbf{50+} first year students with academic, residential, or personal concerns
+%         \vspace{-6pt}
+%         \item Assisted supervisors with documentation related to facility and student care
+%         \vspace{-6pt}
+%         \item Led group meetings of \textbf{30} students to reinforce/establish residential policies
+%     \end{itemize}
+
+% \noindent \normalsize \textbf{Busboy}, Kyoto \hfill \normalsize{Dec 2022 - Dec 2023}\\
+% \setlength \parindent{1cm} 
+%     \vspace{-18pt}
+%     \noindent \hspace{-10pt} \begin{itemize} 
+%         \item Maintained cleanliness by sweeping, mopping, washing dishes, and wiping tables
+%         \vspace{-6pt}
+%         \item Acted as a line of communication between the dishwasher and server
+%         \vspace{-6pt}
+%         \item Provided quick responses to customers and cowokers in need of assistance
+%     \end{itemize}
+
+\noindent \normalsize \textbf{Prototype Developer}, IDEO, San Francisco, CA \hfill \normalsize{Jun 2022 - Jul 2022}\\
+\setlength \parindent{1cm} 
+    \vspace{-16pt}
+    \noindent \hspace{-10pt} \begin{itemize} 
+        \item Worked in a cross-functional team including a product manager, designer,\\
+        and another mobile developer
+        \vspace{-6pt}
+        \item Responsible for developing application prototypes in Android Studio based on the designer's\\
+        template in Figma
+        \vspace{-6pt}
+        \item Operated user testing and feedback reports with the product manager to expand the accessibility\\
+        of the application
+    \end{itemize}
+
+\noindent \normalsize \textbf{Founder and Instructor}, Jr. Oakland Cubers, Oakland, CA \hfill \normalsize{Jun 2016 - Jul 2020}\\
+\setlength \parindent{1cm} 
+    \vspace{-16pt}
+    \noindent \hspace{-10pt} \begin{itemize} 
+        \item Coached and taught \textbf{1,000+} how to solve the Rubik's Cube
+        \vspace{-6pt}
+        \item Gave \textbf{60+} lectures and presentations about Rubik's Cube algorithms
+        \vspace{-6pt}
+        \item Collaborated with public libraries, Native American youth programs, and mosques 
+        \vspace{-6pt}
+        \item Held free math and physics tutoring sessions
+    \end{itemize}
+\secEndSpace
+% ------------- end education ------------- %
+\vspace{-4pt}
+\section{ \color{black} \hspace{-8pt} \large \textbf{Projects} }
+
+\secStartSpace
+\noindent \normalsize \textbf{Peachy}, Full Stack Developer \hfill \normalsize{Jun 2023 - Aug 2023}\\
+\textit{A Slack application created to assist users in work and school environments}
+\setlength \parindent{1cm} 
+    \vspace{-5pt}
+    \noindent \hspace{-10pt} \begin{itemize} 
+        \item Responsible for the full-stack development of a context-aware Slack generative\\
+        AI chatbot aimed to increase work productivity
+        \vspace{-6pt}
+        \item Integrated Slack API and Google PaLM 2 API with MongoDB as a bases for the backend
+        \vspace{-6pt}
+        \item Conducted user testing and design critique to iteratively develop features, including\\
+        tone customization and response time efficiency 
+        \vspace{-6pt}
+        \item Published Peachy's documentation to \href{https://github.com/pamela-pan/peachy}{\color{blue}{GitHub}}, showcased updates on \href{https://youtu.be/CNDHOZP25fg?si=DqhnNwuIOLd0C-A8}{\color{blue}{YouTube}},\\
+        and reached \textbf{5,000+} impressions with its \href{https://www.linkedin.com/feed/update/urn:li:activity:7099082369512402944?utm_source=share&utm_medium=member_desktop}{\color{blue}{LinkedIn}} post.
+    \end{itemize}
+    \vspace{-5pt} \hspace{0pt}
+    \textbf{Skills:}  Python, NoSQL
+\secEndSpace
+
+
+
+% \noindent \normalsize \vspace{2pt} \textbf{Peachy}, Full Stack Engineer \hfill \normalsize{Jun 2023 - Aug 2023}\\
+%     \setlength \parindent{1cm} 
+%     \vspace{3pt} \hspace{0pt}
+%     \textit{A Slack application created to help users prepare for job interviews}\\
+%         \vspace{3pt}
+%         Utilized Slack API, Google PaLM 2, and MongoDB for a scalable backend.\\
+%         \vspace{3pt}
+%         Customized bot response tone, context-awareness, and complex task completion.\\
+%         \vspace{3pt}
+%         Achieved seamless real-time user interactions in Slack\\
+%         \vspace{3pt}
+%         Posted Peachy's documentation to \href{https://github.com/pamela-pan/peachy}{\color{blue}{GitHub}} and showcased updates on \href{https://youtu.be/CNDHOZP25fg?si=DqhnNwuIOLd0C-A8}{\color{blue}{YouTube}}.\\
+
+%     \vspace{-10pt} \hspace{-28pt}
+%     \textbf{Skills:}  Python, NoSQL
+% \secEndSpace
+
+
+\secStartSpace
+\noindent \normalsize \textbf{Bay Area Rapid Transit Discord Bot}, Full Stack Developer \hfill \normalsize{Mar 2022 - Jun 2022}\\
+\textit{A Discord application made to encourage public transportation within the Bay Area}
+\setlength \parindent{1cm} 
+    \vspace{-5pt}
+    \noindent \hspace{-10pt} \begin{itemize} 
+        \item Fostered community interaction and convenience by leveraging public transit data within Discord
+        \vspace{-6pt}
+        \item Wrote scripts to fetch and display train departure/arrival times from the Bay Area Rapid Transit API
+        \vspace{-6pt}
+        \item Gained \textbf{200+} views on \href{https://youtu.be/ONF2q3rHjRI?si=9Lg-JaIrbQBwhoAw}{\color{blue}{YouTube}} addressing the power of transportation and how it affects\\
+        communities accross the Bay Area
+    \end{itemize}
+    \vspace{-5pt} \hspace{0pt}
+    \textbf{Skills:}  JavaScript, Node.js
+\secEndSpace
+
+
+\secStartSpace
+\noindent \normalsize \textbf{Class Roster}, Lead Developer  \hfill \normalsize{Aug 2023 - Dec 2023}\\
+\textit{An application that allows users to add, delete, and edit classes in a roster from the terminal}
+\setlength \parindent{1cm} 
+    \vspace{-5pt}
+    \noindent \hspace{-10pt} \begin{itemize} 
+        \item Rearchitected a menu system to take advantage of polymorphism
+        \vspace{-6pt}
+        \item Enhanced menu system's functionality by incorporating lambdas and function pointers
+        \vspace{-6pt}
+        \item Utilized smart pointers to provide a safer way to manage dynamically allocated memory, \\
+        avoiding memory leaks.
+    \end{itemize}
+    \vspace{-4pt} \hspace{0pt}
+    \textbf{Skills:}  C++, C
+\secEndSpace
+
+
+% \secStartSpace
+% \noindent \normalsize \vspace{2pt} \textbf{Bay Area Rapid Transit Discord Bot} \hfill \normalsize{Mar 2022 - Jun 2022}\\
+%     \setlength \parindent{1cm} 
+%     \vspace{3pt} \hspace{0pt}
+%     Fostered community interaction and convenience by leveraging public transit data within Discord.\\
+%     \vspace{3pt}
+%     Wrote scripts to fetch and display train departure/arrival times from the Bay Area Rapid Transit API.\\
+%     \vspace{3pt}
+%     Made a \href{https://youtu.be/ONF2q3rHjRI?si=9Lg-JaIrbQBwhoAw}{\color{blue}{YouTube}} video addressing the power of transpation and how it affects communities accross the Bay.\\
+
+%     \vspace{-8pt} \hspace{-28pt}
+%     \textbf{Skills:}  JavaScript, Node.js
+% \secEndSpace
+
+
+
+% ------------- skills ------------- %
+\section{ \color{black} \hspace{-8pt} \large \textbf{Awards and Honors} }
+
+\secStartSpace
+\noindent \normalsize \vspace{2pt} \textbf{Hack MongoDB Atlas on Google Cloud Grand Prize Winner} \hfill \normalsize{Aug 2023} \\
+    \setlength \parindent{1cm} 
+    \vspace{3pt} \hspace{0pt}
+    Issued by Atlas Madness: Hack MongoDB on Google Cloud
+    \vspace{3pt}
+
+\noindent \normalsize \vspace{2pt} \textbf{7th Generation Scholar} \hfill \normalsize{May 2021} \\
+    \setlength \parindent{1cm} 
+    \vspace{3pt} \hspace{0pt}
+    Issued by Native American Health Center: Seven Generations Scholarship Fund
+    \vspace{3pt}
+
+\noindent \normalsize \vspace{2pt} \textbf{Native American Youth Ambassador} \hfill \normalsize{Oct 2018} \\
+    \setlength \parindent{1cm} 
+    \vspace{3pt} \hspace{0pt}
+    Issued by Center for Native American Youth
+
+\secEndSpace
+% ------------- end skills ------------- %
+
+
+
+\end{document}
